@@ -31,7 +31,7 @@ namespace _400BadRequest
                     Console.WriteLine("Uploading to Blob storage as blob '{0}'", Path.GetFileName(fs.Name));
                     CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(Path.GetFileName(fs.Name));
                     cloudBlockBlob.UploadFromStream(fs);
-                    Console.WriteLine("Uploaded completed on {0} UTC", DateTime.Now.ToUniversalTime().ToString());
+                    Console.WriteLine("Upload completed on {0} UTC", DateTime.Now.ToUniversalTime().ToString());
                 }
             }
             catch (Exception e)
